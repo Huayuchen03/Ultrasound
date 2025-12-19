@@ -1,0 +1,122 @@
+\relax 
+\citation{vanveen1988beamforming,jensen1996field}
+\citation{mallart1994adaptive}
+\citation{capon1969high,vanveen1988beamforming}
+\citation{luchies2018dnn,luijten2019icassp,vanSloun2020dlus,cubdl2020}
+\citation{vanveen1988beamforming}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {I-A}}Objectives and contributions}{1}{}\protected@file@percent }
+\citation{mallart1994adaptive}
+\citation{capon1969high,vanveen1988beamforming}
+\citation{luchies2018dnn,luijten2019icassp,vanSloun2020dlus}
+\citation{cubdl2020}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Background and Related Work}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Receive beamforming in ultrasound}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Coherence-based weighting}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}Minimum-variance (MVDR/Capon) beamforming}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-D}}Deep learning for beamforming}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Signal Model and Notation}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Point-scatterer channel model}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Delayed snapshot representation}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Classical Beamforming Methods}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Delay-and-sum (DAS)}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Coherence factor (CF)}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}MVDR/Capon (optional baseline)}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Envelope detection and B-mode}{3}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Qualitative complexity and practical considerations.}}{3}{}\protected@file@percent }
+\newlabel{tab:complexity}{{I}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Computational Complexity and Implementation Considerations}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Learning-Based Weight Prediction Beamformer}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Motivation}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Weight-prediction formulation}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-C}}Architecture}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-D}}Teacher--student training objective}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-E}}Training data construction}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-F}}Optimization details}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-G}}Alternative learning objectives (extensions)}{4}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Default neural network and training configuration (teacher imitation).}}{4}{}\protected@file@percent }
+\newlabel{tab:nn_hparams}{{II}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-H}}Full-image inference pipeline}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-I}}Stability, regularization, and interpretability}{4}{}\protected@file@percent }
+\citation{ustb_datasets}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Key simulation and reconstruction parameters used in experiments.}}{5}{}\protected@file@percent }
+\newlabel{tab:params}{{III}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Point-scatterer phantom geometry (representative seed): speckle scatterers (gray), anechoic cyst boundary (red circle), and bright point target(s) (red markers).}}{5}{}\protected@file@percent }
+\newlabel{fig:phantom_geometry}{{1}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Experimental Setup}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-A}}Array, acquisition, and image grid}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-B}}Phantom design}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-C}}Evaluation metrics}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-D}}Implementation notes}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-E}}Public real-data example (HDF5/UFF)}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Results}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-A}}Qualitative results on a reference phantom}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-B}}Real-data example on a public dataset (qualitative)}{5}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces DAS B-mode image on a simulated speckle+cyst phantom (seed\nobreakspace  {}0).}}{6}{}\protected@file@percent }
+\newlabel{fig:bmode_das}{{2}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Adaptive CF-weighted DAS image on the same phantom. The cyst is visually more distinct due to coherence-based suppression.}}{6}{}\protected@file@percent }
+\newlabel{fig:bmode_cf}{{3}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-C}}Single-phantom quantitative metrics}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-D}}Ablation: apodization window}{6}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Coherence factor map for the reference phantom (seed\nobreakspace  {}0). Values closer to 1 indicate high inter-element coherence after delay alignment.}}{6}{}\protected@file@percent }
+\newlabel{fig:cf_map}{{4}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Metrics on a single reference phantom (seed\nobreakspace  {}0, $96\times 220$ grid). Runtime includes snapshot extraction.}}{6}{}\protected@file@percent }
+\newlabel{tab:single_metrics}{{IV}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-E}}Multi-seed Monte Carlo study}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-F}}Qualitative variability across random seeds}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-G}}Optional MVDR profile comparison}{6}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Real-data example (placeholders by default): plane-wave DAS (left) and CF-weighted DAS (right) produced by \texttt  {src.run\_real\_uff}. Replace these figures with outputs generated from a public UFF/HDF5 dataset.}}{7}{}\protected@file@percent }
+\newlabel{fig:real_data_pair}{{5}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Apodization ablation on the reference phantom (seed\nobreakspace  {}0, $96\times 220$ grid).}}{7}{}\protected@file@percent }
+\newlabel{tab:apod_metrics}{{V}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Lateral profiles at $z\approx \SI {30}{mm}$ for boxcar vs Hanning apodization (seed\nobreakspace  {}0). Boxcar reduces the mainlobe width in this setup but increases sidelobes; Hanning suppresses sidelobes but widens the mainlobe.}}{7}{}\protected@file@percent }
+\newlabel{fig:apod_profiles}{{6}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-H}}Runtime scaling}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Monte Carlo metrics across five random phantoms (seeds 0--4): mean and standard deviation for DAS and CF.}}{7}{}\protected@file@percent }
+\newlabel{fig:mc_bar}{{7}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Monte Carlo results (mean $\pm $ std) across five random seeds (0--4), grid $96\times 220$.}}{7}{}\protected@file@percent }
+\newlabel{tab:mc_table}{{VI}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VIII-I}}Discretization effects: impact of grid resolution}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Example of qualitative variability: DAS (left) and CF (right) for a different random phantom (seed\nobreakspace  {}2).}}{8}{}\protected@file@percent }
+\newlabel{fig:seed2_pair}{{8}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Normalized lateral profiles at $z\approx \SI {30}{mm}$ comparing DAS, CF-weighted DAS, and simplified MVDR (seed\nobreakspace  {}0).}}{8}{}\protected@file@percent }
+\newlabel{fig:mvdr_profile}{{9}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Effect of image grid size on metrics (seed\nobreakspace  {}0).}}{8}{}\protected@file@percent }
+\newlabel{tab:grid_sweep}{{VII}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Discussion}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-A}}Why CF improves contrast and (often) resolution}{8}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Runtime scaling with number of pixels for DAS and CF-weighted DAS (seed\nobreakspace  {}0).}}{8}{}\protected@file@percent }
+\newlabel{fig:runtime_scaling}{{10}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-B}}Trade-offs and limitations}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-C}}Implications for learning-based beamforming}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-D}}Sensitivity to sound-speed mismatch and steering errors}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IX-E}}Toward more realistic data and evaluation}{9}{}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Delay-and-sum beamforming (DAS)}}{9}{}\protected@file@percent }
+\newlabel{alg:das}{{1}{9}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Coherence-factor weighting (CF)}}{9}{}\protected@file@percent }
+\newlabel{alg:cf}{{2}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {X}Conclusion and Future Work}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  A: Algorithms}{9}{}\protected@file@percent }
+\bibcite{capon1969high}{1}
+\bibcite{vanveen1988beamforming}{2}
+\bibcite{jensen1996field}{3}
+\bibcite{mallart1994adaptive}{4}
+\bibcite{luchies2018dnn}{5}
+\bibcite{luijten2019icassp}{6}
+\bibcite{vanSloun2020dlus}{7}
+\bibcite{ustb_datasets}{8}
+\bibcite{cubdl2020}{9}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Simplified MVDR at a single pixel (conceptual)}}{10}{}\protected@file@percent }
+\newlabel{alg:mvdr}{{3}{10}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces Teacher--student training for NN beamforming (high-level)}}{10}{}\protected@file@percent }
+\newlabel{alg:train}{{4}{10}}
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  B: Additional Tables and Implementation Details}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {B-A}}Per-seed metrics}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {B-B}}Neural network parameter count and memory}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  C: Reproducibility}{10}{}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces Full-image NN inference (conceptual)}}{10}{}\protected@file@percent }
+\newlabel{alg:infer}{{5}{10}}
+\@writefile{lot}{\contentsline {table}{\numberline {VIII}{\ignorespaces Per-seed metrics (grid $96\times 220$).}}{10}{}\protected@file@percent }
+\newlabel{tab:per_seed}{{VIII}{10}}
+\@writefile{toc}{\contentsline {section}{References}{10}{}\protected@file@percent }
+\gdef \@abspage@last{10}
