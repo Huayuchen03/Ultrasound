@@ -101,6 +101,8 @@ You can choose the **teacher** target:
 python -m src.build_dataset --out_npz data/train.npz --teacher cf --num_phantoms 20 --samples_per_phantom 8000 --seed 0
 python -m src.build_dataset --out_npz data/val.npz   --teacher cf --num_phantoms 5  --samples_per_phantom 8000 --seed 1
 ```
+If you just want a quick smoke-test, you can omit `--out_npz` and let the script
+write `data/demo_dataset.npz` by default.
 
 ### Step B: train
 ```bash

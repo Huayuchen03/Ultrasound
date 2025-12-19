@@ -103,7 +103,12 @@ def build_dataset(
 
 def parse_args(argv: Tuple[str, ...] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--out_npz", required=True, type=Path, help="Destination .npz path")
+    parser.add_argument(
+        "--out_npz",
+        type=Path,
+        default=Path("data/demo_dataset.npz"),
+        help="Destination .npz path (default: data/demo_dataset.npz)",
+    )
     parser.add_argument(
         "--teacher",
         choices=["cf", "mvdr"],
