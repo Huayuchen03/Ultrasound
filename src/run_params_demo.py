@@ -8,9 +8,29 @@ can be executed either as ``python -m src.run_params_demo`` or
 from __future__ import annotations
 
 import json
+import sys
 from dataclasses import asdict
 from pathlib import Path
 from typing import Any, Dict
+
+
+def _ensure_repo_on_path() -> None:
+    """Allow ``python src/run_params_demo.py`` to import ``src``.
+
+    When executed as a script, ``__package__`` is empty so absolute imports
+    fail. Insert the repository root into ``sys.path`` to mirror module
+    execution via ``python -m src.run_params_demo``.
+    """
+
+    if __package__:
+        return
+
+    repo_root = Path(__file__).resolve().parent.parent
+    if str(repo_root) not in sys.path:
+        sys.path.insert(0, str(repo_root))
+
+
+_ensure_repo_on_path()
 
 from src.params import AcqParams, ArrayParams, ImageGrid
 

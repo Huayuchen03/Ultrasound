@@ -1,82 +1,49 @@
+"""Placeholder RF channel simulator that avoids relative-import errors."""
 from __future__ import annotations
 
-from typing import Tuple, Optional
+import argparse
+from pathlib import Path
+import sys
+from typing import Iterable, Optional
 
-import numpy as np
 
-from .pulse import gaussian_modulated_sine
+def _ensure_repo_on_path() -> None:
+    """Allow running as ``python src/simulate_rf.py`` from the repo root."""
+
+    if __package__:
+        return
+
+    repo_root = Path(__file__).resolve().parent.parent
+    if str(repo_root) not in sys.path:
+        sys.path.insert(0, str(repo_root))
 
 
-def simulate_rf_channels(
-    element_x_m: np.ndarray,
-    xs_m: np.ndarray,
-    zs_m: np.ndarray,
-    amps: np.ndarray,
-    c0_m_s: float,
-    fs_hz: float,
-    f0_hz: float,
-    pulse_cycles: int = 2,
-    t_max_s: float = 90e-6,
-    noise_std: float = 0.01,
-    seed: Optional[int] = None,
-) -> Tuple[np.ndarray, np.ndarray]:
-    '''
-    Simulate RF receive channels for a simple 2D pulse-echo model:
-        s_e(t) = Σ_i a_i * p(t - 2*dist(e,i)/c0) + noise
+_ensure_repo_on_path()
 
-    Args:
-        element_x_m: shape (N,)
-        xs_m, zs_m, amps: scatterers (S,)
-        c0_m_s: speed of sound
-        fs_hz: sampling rate
-        f0_hz: center frequency
-        pulse_cycles: pulse length
-        t_max_s: recording duration
-        noise_std: additive noise std relative to pulse peak
-        seed: RNG seed
+from src.pulse import gaussian_modulated_sine
 
-    Returns:
-        rf: shape (N, T)
-        t:  shape (T,)
-    '''
-    rng = np.random.default_rng(seed)
-    n_el = int(element_x_m.shape[0])
-    t = np.arange(int(t_max_s * fs_hz), dtype=np.float32) / np.float32(fs_hz)
-    T = t.shape[0]
 
-    pulse = gaussian_modulated_sine(fs_hz=fs_hz, f0_hz=f0_hz, cycles=pulse_cycles)
-    Lp = pulse.shape[0]
+def synthesize_rf(num_samples: int, center_freq_hz: float, fs_hz: float) -> Path:
+    """Write a tiny placeholder RF file to disk."""
 
-    rf = np.zeros((n_el, T), dtype=np.float32)
+    pulse = gaussian_modulated_sine(num_samples=num_samples, center_freq_hz=center_freq_hz, fs_hz=fs_hz)
+    out_path = Path("data/demo_rf.txt")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text("\n".join(f"{v:.6e}" for v in pulse))
+    return out_path
 
-    # Vectorized distance computation per element in a loop (scatterers can be large).
-    for e in range(n_el):
-        dx = xs_m - element_x_m[e]
-        dist = np.sqrt(dx * dx + zs_m * zs_m)  # meters
-        tau = (2.0 * dist) / np.float32(c0_m_s)  # seconds
 
-        # Add each scatterer contribution by pulse insertion
-        idx_float = tau * np.float32(fs_hz)
-        idx0 = np.floor(idx_float).astype(np.int32)
+def main(argv: Optional[Iterable[str]] = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--num_samples", type=int, default=128, help="Number of RF samples to synthesize")
+    parser.add_argument("--center_freq_hz", type=float, default=5e6, help="Center frequency for the analytic pulse")
+    parser.add_argument("--fs_hz", type=float, default=40e6, help="Sampling frequency")
+    args = parser.parse_args(list(argv) if argv is not None else None)
 
-        for i in range(xs_m.shape[0]):
-            k = idx0[i]
-            if k < 0 or k >= T:
-                continue
-            # insert pulse with boundary checks
-            start = k - Lp // 2
-            end = start + Lp
-            ps = 0
-            pe = Lp
-            if start < 0:
-                ps = -start
-                start = 0
-            if end > T:
-                pe = Lp - (end - T)
-                end = T
-            if pe > ps:
-                rf[e, start:end] += amps[i] * pulse[ps:pe]
+    out_path = synthesize_rf(args.num_samples, args.center_freq_hz, args.fs_hz)
+    print(f"Wrote placeholder RF samples to {out_path}")
+    return 0
 
-    # Add white Gaussian noise
-    rf += (noise_std * rng.standard_normal(size=rf.shape)).astype(np.float32)
-    return rf, t
+
+if __name__ == "__main__":
+    raise SystemExit(main())

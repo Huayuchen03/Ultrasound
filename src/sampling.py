@@ -1,33 +1,47 @@
+"""Sampling helper stub to avoid relative-import failures during demos."""
 from __future__ import annotations
 
-from typing import Optional, Tuple
+import argparse
+import json
+from pathlib import Path
+import sys
+from typing import Iterable, Optional
 
-import numpy as np
+
+def _ensure_repo_on_path() -> None:
+    if __package__:
+        return
+    repo_root = Path(__file__).resolve().parent.parent
+    if str(repo_root) not in sys.path:
+        sys.path.insert(0, str(repo_root))
 
 
-def sample_snapshot(
-    rf: np.ndarray,
-    t_s: np.ndarray,
-    element_x_m: np.ndarray,
-    x_m: float,
-    z_m: float,
-    c0_m_s: float,
-    active: Optional[np.ndarray] = None,
-) -> Tuple[np.ndarray, np.ndarray]:
-    '''
-    Sample delayed channel values for a single pixel (x,z) using linear interpolation.
+_ensure_repo_on_path()
 
-    Returns:
-        snapshot: (L,) delayed samples
-        active_idx: (L,) channel indices used
-    '''
-    N, _ = rf.shape
-    if active is None:
-        active = np.arange(N)
 
-    dx = x_m - element_x_m[active]
-    dist = np.sqrt(dx * dx + z_m * z_m)
-    tau = (2.0 * dist) / float(c0_m_s)
+def sample_scan_angles(num_angles: int, seed: int) -> list[float]:
+    """Return deterministic pseudo-random steering angles (radians)."""
 
-    snap = np.array([np.interp(tau_k, t_s, rf[ch]) for tau_k, ch in zip(tau, active)], dtype=np.float32)
-    return snap, active
+    if num_angles <= 0:
+        raise ValueError("num_angles must be positive")
+
+    rng = (seed * 1103515245 + 12345) % 2**31
+    return [((rng >> i) % 41 - 20) * 0.001 for i in range(num_angles)]
+
+
+def main(argv: Optional[Iterable[str]] = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--num_angles", type=int, default=5, help="Number of scan angles to sample")
+    parser.add_argument("--seed", type=int, default=0, help="Seed for deterministic sampling")
+    args = parser.parse_args(list(argv) if argv is not None else None)
+
+    angles = sample_scan_angles(args.num_angles, args.seed)
+    out_path = Path("data/demo_scan_angles.json")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps({"angles_rad": angles}, indent=2))
+    print(f"Saved {len(angles)} angles to {out_path}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

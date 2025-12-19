@@ -1,71 +1,50 @@
+"""Placeholder phantom generation script with import-safe execution."""
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Optional, Tuple
-
-import numpy as np
-
-
-@dataclass(frozen=True)
-class Cyst:
-    center_x_m: float
-    center_z_m: float
-    radius_m: float
+import argparse
+import json
+from pathlib import Path
+import sys
+from typing import Iterable, Optional
 
 
-def generate_speckle_scatterers(
-    num_scatterers: int,
-    x_range_m: Tuple[float, float],
-    z_range_m: Tuple[float, float],
-    cyst: Optional[Cyst] = None,
-    seed: Optional[int] = None,
-) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
-    '''
-    Generate random point scatterers (speckle) with Rayleigh amplitudes.
-
-    Args:
-        num_scatterers: number of scatterers.
-        x_range_m: (xmin, xmax).
-        z_range_m: (zmin, zmax).
-        cyst: optional cyst region where scatterers are suppressed.
-        seed: RNG seed.
-
-    Returns:
-        (xs, zs, amps)
-    '''
-    rng = np.random.default_rng(seed)
-    xs = rng.uniform(x_range_m[0], x_range_m[1], size=num_scatterers)
-    zs = rng.uniform(z_range_m[0], z_range_m[1], size=num_scatterers)
-
-    # Rayleigh-like amplitude (speckle)
-    amps = rng.rayleigh(scale=1.0, size=num_scatterers).astype(np.float32)
-    amps *= rng.choice([-1.0, 1.0], size=num_scatterers).astype(np.float32)  # allow sign
-
-    if cyst is not None:
-        dx = xs - cyst.center_x_m
-        dz = zs - cyst.center_z_m
-        inside = (dx * dx + dz * dz) <= (cyst.radius_m * cyst.radius_m)
-        amps[inside] = 0.0
-
-    return xs.astype(np.float32), zs.astype(np.float32), amps.astype(np.float32)
+def _ensure_repo_on_path() -> None:
+    if __package__:
+        return
+    repo_root = Path(__file__).resolve().parent.parent
+    if str(repo_root) not in sys.path:
+        sys.path.insert(0, str(repo_root))
 
 
-def add_point_targets(
-    xs: np.ndarray,
-    zs: np.ndarray,
-    amps: np.ndarray,
-    targets: Tuple[Tuple[float, float, float], ...],
-) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
-    '''
-    Add bright point targets.
+_ensure_repo_on_path()
 
-    targets: list of (x_m, z_m, amplitude)
-    '''
-    tx = np.array([t[0] for t in targets], dtype=np.float32)
-    tz = np.array([t[1] for t in targets], dtype=np.float32)
-    ta = np.array([t[2] for t in targets], dtype=np.float32)
 
-    xs2 = np.concatenate([xs, tx], axis=0)
-    zs2 = np.concatenate([zs, tz], axis=0)
-    amps2 = np.concatenate([amps, ta], axis=0)
-    return xs2, zs2, amps2
+def generate_phantom(num_scatterers: int, seed: int) -> dict:
+    rng = (seed * 1664525 + 1013904223) % 2**32
+    scatterers = [
+        {
+            "x_m": ((rng >> i) % 2000 - 1000) / 1e5,
+            "z_m": ((rng >> (i + 5)) % 2000) / 1e4,
+            "amplitude": 1.0,
+        }
+        for i in range(max(num_scatterers, 1))
+    ]
+    return {"num_scatterers": num_scatterers, "seed": seed, "scatterers": scatterers}
+
+
+def main(argv: Optional[Iterable[str]] = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--num_scatterers", type=int, default=3, help="Number of synthetic scatterers")
+    parser.add_argument("--seed", type=int, default=0, help="Seed for deterministic scatterers")
+    args = parser.parse_args(list(argv) if argv is not None else None)
+
+    phantom = generate_phantom(args.num_scatterers, args.seed)
+    out_path = Path("data/demo_phantom.json")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(phantom, indent=2))
+    print(f"Saved placeholder phantom to {out_path}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
