@@ -25,6 +25,21 @@ If you want CPU-only TensorFlow:
 pip install tensorflow-cpu==2.15.0
 ```
 
+If you encounter errors such as:
+
+```
+ImportError: attempted relative import with no known parent package
+```
+
+ensure you run scripts with the module flag so Python treats `src/` as a
+package:
+
+```bash
+python -m src.run_params_demo
+```
+This invocation works regardless of your current working directory and avoids
+the relative-import problem that occurs when calling `python src/run_params_demo.py`.
+
 ---
 
 ## 2. Quick start (generate data + beamform baselines)
