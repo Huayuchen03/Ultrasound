@@ -1,0 +1,8 @@
+numpy==1.24.0
+scipy==1.10.1
+matplotlib==3.7.5
+pandas==2.0.3
+pyyaml==6.0.1
+tqdm==4.66.1
+tensorflow-cpu==2.15.0
+h5py==3.10.0
