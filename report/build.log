@@ -1,0 +1,312 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-01-16>
+(/usr/share/texlive/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/translations/translations.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file main.aux.
+-- Lines per column: 56 (exact).
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictio
+nary-english.trsl)
+
+LaTeX Warning: Citation `vanveen1988beamforming' on page 1 undefined on input l
+ine 36.
+
+
+LaTeX Warning: Citation `jensen1996field' on page 1 undefined on input line 36.
+
+
+
+LaTeX Warning: Citation `mallart1994adaptive' on page 1 undefined on input line
+ 38.
+
+
+LaTeX Warning: Citation `capon1969high' on page 1 undefined on input line 38.
+
+
+LaTeX Warning: Citation `vanveen1988beamforming' on page 1 undefined on input l
+ine 38.
+
+
+LaTeX Warning: Citation `luchies2018dnn' on page 1 undefined on input line 40.
+
+
+LaTeX Warning: Citation `luijten2019icassp' on page 1 undefined on input line 4
+0.
+
+
+LaTeX Warning: Citation `vanSloun2020dlus' on page 1 undefined on input line 40
+.
+
+
+LaTeX Warning: Citation `cubdl2020' on page 1 undefined on input line 40.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+
+LaTeX Warning: Citation `vanveen1988beamforming' on page 1 undefined on input l
+ine 60.
+
+
+Underfull \vbox (badness 1622) has occurred while \output is active [1{/var/lib
+/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `mallart1994adaptive' on page 2 undefined on input line
+ 67.
+
+
+LaTeX Warning: Citation `capon1969high' on page 2 undefined on input line 72.
+
+
+LaTeX Warning: Citation `vanveen1988beamforming' on page 2 undefined on input l
+ine 72.
+
+
+LaTeX Warning: Citation `luchies2018dnn' on page 2 undefined on input line 77.
+
+
+LaTeX Warning: Citation `luijten2019icassp' on page 2 undefined on input line 7
+7.
+
+
+LaTeX Warning: Citation `vanSloun2020dlus' on page 2 undefined on input line 77
+.
+
+
+LaTeX Warning: Citation `cubdl2020' on page 2 undefined on input line 86.
+
+[2]
+Underfull \hbox (badness 1859) in paragraph at lines 163--164
+[]\OT1/ptm/b/n/10 NN weight pre-dic-tion\OT1/ptm/m/n/10 : snap-shot ex-trac-tio
+n plus a
+
+LaTeX Warning: Reference `tab:complexity' on page 3 undefined on input line 166
+.
+
+
+Overfull \hbox (51.99803pt too wide) in paragraph at lines 172--182
+ [][] 
+[3] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd)
+Underfull \hbox (badness 2941) in paragraph at lines 220--221
+[]\OT1/ptm/m/n/10 The dataset also stores per-element mean and vari-
+
+LaTeX Warning: Reference `tab:nn_hparams' on page 4 undefined on input line 223
+.
+
+
+LaTeX Warning: Reference `tab:params' on page 4 undefined on input line 277.
+
+[4]
+
+LaTeX Warning: Reference `fig:phantom_geometry' on page 5 undefined on input li
+ne 304.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
+[]\OT1/ptm/b/n/10 Contrast Ra-tio (CR, dB)\OT1/ptm/m/n/10 : $[] \OT1/cmr/m/n/10
+ =
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
+\OT1/cmr/m/n/10 20 [][]  []$ \OT1/ptm/m/n/10 com-puted on en-ve-lope
+
+LaTeX Warning: Reference `fig:real_data_pair' on page 5 undefined on input line
+ 330.
+
+
+Underfull \hbox (badness 7168) in paragraph at lines 330--331
+\OT1/ptm/m/n/10 is ex-e-cuted and its out-put im-ages are copied into
+
+LaTeX Warning: Reference `fig:bmode_das' on page 5 undefined on input line 334.
+
+
+
+LaTeX Warning: Reference `fig:bmode_cf' on page 5 undefined on input line 334.
+
+
+LaTeX Warning: Reference `fig:cf_map' on page 5 undefined on input line 334.
+
+
+LaTeX Warning: Citation `ustb_datasets' on page 5 undefined on input line 358.
+
+
+LaTeX Warning: Reference `fig:real_data_pair' on page 5 undefined on input line
+ 358.
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 358--359
+[]\OT1/ptm/m/n/10 To com-ple-ment the con-trolled sim-u-la-tion ex-per-i-ments,
+
+
+Underfull \hbox (badness 2680) in paragraph at lines 358--359
+\OT1/ptm/m/n/10 we in-clude a real-data en-try point (HDF5/UFF loader
+
+Underfull \hbox (badness 3919) in paragraph at lines 358--359
+\OT1/ptm/m/n/10 + plane-wave DAS/CF) for pub-licly avail-able chan-nel
+
+Underfull \hbox (badness 2261) in paragraph at lines 358--359
+\OT1/ptm/m/n/10 run-ning \OT1/pcr/m/n/10 python -m src.run_real_uff \OT1/ptm/m/
+n/10 to gen-er-ate
+[5 <./figures/extra/phantom_geometry.png>]
+
+LaTeX Warning: Reference `tab:single_metrics' on page 6 undefined on input line
+ 371.
+
+
+LaTeX Warning: Reference `tab:apod_metrics' on page 6 undefined on input line 3
+89.
+
+
+LaTeX Warning: Reference `fig:apod_profiles' on page 6 undefined on input line 
+389.
+
+
+LaTeX Warning: Reference `fig:mc_bar' on page 6 undefined on input line 415.
+
+
+LaTeX Warning: Reference `tab:mc_table' on page 6 undefined on input line 415.
+
+
+Overfull \hbox (8.68672pt too wide) in paragraph at lines 428--436
+ [][] 
+
+LaTeX Warning: Reference `fig:seed2_pair' on page 6 undefined on input line 439
+.
+
+
+LaTeX Warning: Reference `fig:mvdr_profile' on page 6 undefined on input line 4
+50.
+
+
+LaTeX Warning: Reference `fig:runtime_scaling' on page 6 undefined on input lin
+e 460.
+
+[6 <./figures/baseline_results/bmode_das.png> <./figures/baseline_results/bmode
+_cf.png> <./figures/extra/cf_map.png>]
+
+LaTeX Warning: Reference `tab:grid_sweep' on page 7 undefined on input line 470
+.
+
+
+Underfull \vbox (badness 1077) has occurred while \output is active [7 <./figur
+es/real_data/real_bmode_das.png (PNG copy)> <./figures/real_data/real_bmode_cf.
+png (PNG copy)> <./figures/ablation/apodization_profiles.png> <./figures/montec
+arlo/metrics_bar.png>] [8 <./figures/montecarlo/seed2/bmode_das.png> <./figures
+/montecarlo/seed2/bmode_cf.png> <./figures/extra/lateral_profile_mvdr.png> <./f
+igures/runtime_sweep/runtime_scaling.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 535--536
+[]\OT1/ptm/m/n/10 Evaluating on pub-lic RF datasets and study-ing
+
+LaTeX Warning: Reference `alg:das' on page 9 undefined on input line 541.
+
+
+LaTeX Warning: Reference `alg:cf' on page 9 undefined on input line 541.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd)
+
+LaTeX Warning: Reference `tab:per_seed' on page 9 undefined on input line 622.
+
+
+LaTeX Warning: Reference `tab:mc_table' on page 9 undefined on input line 622.
+
+[9]
+Underfull \hbox (badness 7151) in paragraph at lines 655--656
+[]\OT1/pcr/m/n/10 python -m src.build_dataset \OT1/ptm/m/n/10 and \OT1/pcr/m/n/
+10 python
+
+LaTeX Warning: Reference `fig:real_data_pair' on page 10 undefined on input lin
+e 656.
+
+
+Underfull \hbox (badness 4454) in paragraph at lines 656--657
+[]\OT1/pcr/m/n/10 python -m src.run_real_uff\OT1/ptm/m/n/10 : load a pub-lic
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[10] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information){/usr/share/texlive/texmf-d
+ist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra
+/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
+tmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (10 pages, 1505256 bytes).
+Transcript written on main.log.
